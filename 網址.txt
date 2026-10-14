@@ -1,4 +1,14 @@
-AI 影片互動式課程
-Firebase Hosting：https://aivideo-sk.web.app
-提示詞頁：https://aivideo-sk.web.app/prompts.html
-本機預覽：npm run serve → http://localhost:3000/
+--- GitHub ---
+https://github.com/jeff79213-baba/ai-video-interactive-course
+
+--- GitHub Pages ---
+https://jeff79213-baba.github.io/ai-video-interactive-course/
+
+--- Firebase Hosting ---
+https://aivideo-sk.web.app
+
+--- 本機預覽 ---
+http://localhost:3000
+
+--- 本地路徑 ---
+C:\Users\TW-10\Documents\firebase雲端資料夾\ai影片互動式課程
