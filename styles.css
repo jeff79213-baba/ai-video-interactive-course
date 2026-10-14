@@ -106,37 +106,46 @@ a { color: var(--accent); }
   background: rgba(0, 0, 0, 0.92);
   z-index: 50;
   cursor: zoom-out;
+  overflow-y: auto;
 }
 .lightbox.is-open { display: grid; }
-.lightbox__inner { display: flex; flex-direction: column; align-items: center; }
+.lightbox__inner { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding: 2rem 1rem;
+  max-width: 90vw;
+  width: 100%;
+}
 .lightbox__canvas {
   width: min(80vmin, 80vh);
   height: min(80vmin, 80vh);
   padding: 24px;
   background: #fff;
   border-radius: var(--radius);
+  flex-shrink: 0;
 }
 .lightbox__canvas svg { width: 100%; height: 100%; display: block; }
 .lightbox__prompt {
-  width: min(80vmin, 80vh);
-  max-height: 40vh;
-  margin-top: var(--step-1);
-  padding: var(--step-0);
+  width: 100%;
+  max-width: 800px;
+  margin-top: var(--step-2);
+  padding: var(--step-1);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow-y: auto;
   white-space: pre-wrap;
   word-break: break-word;
   font-family: var(--font);
   font-size: var(--step-0);
   color: var(--text);
   text-align: left;
+  line-height: 1.8;
 }
 .lightbox__actions {
   display: flex;
   justify-content: center;
-  margin-top: var(--step-0);
+  margin-top: var(--step-1);
 }
 .lightbox__btn {
   font: inherit;
