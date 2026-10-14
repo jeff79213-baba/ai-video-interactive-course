@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "site": "aivideo-sk",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      "**/node_modules/**",
+      "docs/**",
+      "tests/**",
+      "package.json",
+      "package-lock.json",
+      "vitest.config.js",
+      "video/README.txt",
+      "網址.txt"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(html|js|css)",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      }
+    ]
+  }
+}

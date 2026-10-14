@@ -1,0 +1,4 @@
+AI 影片互動式課程
+Firebase Hosting：https://aivideo-sk.web.app
+提示詞頁：https://aivideo-sk.web.app/prompts.html
+本機預覽：npm run serve → http://localhost:3000/

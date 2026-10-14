@@ -1,0 +1,15 @@
+{
+  "name": "ai-video-interactive-course",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "serve": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8",
+    "jsdom": "^25.0.1"
+  }
+}
