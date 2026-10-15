@@ -24,21 +24,24 @@ function getPromptText(qrId) {
 }
 
 function render() {
-  const { index } = setActiveIndex(root, current);
+  const { index, count } = setActiveIndex(root, current);
   btnPrev.disabled = index === 0;
-  btnNext.disabled = index === CHAPTER_COUNT - 1;
-  
-  // Show intro video only for Chapter 1 (index 0)
-  if (introVideo) {
-    introVideo.hidden = index !== 0;
-  }
-  if (videoHint) {
-    videoHint.hidden = index !== 0;
+  btnNext.disabled = index === count - 1;
+
+  // 封面頁顯示「課程總覽」，其餘顯示章號（封面 index=0、ch1 index=1）
+  const counter = root.querySelector("[data-progress]");
+  if (counter) {
+    counter.textContent = index === 0 ? "課程總覽" : `第 ${index} / ${CHAPTER_COUNT} 章`;
   }
 }
 
+function slideCount() {
+  return root.querySelectorAll("[data-chapter]").length;
+}
+
 function go(delta) {
-  current = delta > 0 ? nextIndex(current, CHAPTER_COUNT) : prevIndex(current, CHAPTER_COUNT);
+  const count = slideCount();
+  current = delta > 0 ? nextIndex(current, count) : prevIndex(current, count);
   render();
 }
 
