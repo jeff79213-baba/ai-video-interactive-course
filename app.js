@@ -16,8 +16,11 @@ const videoHint = document.querySelector("[data-video-hint]");
 let current = 0;
 
 function getPromptText(qrId) {
-  const prompt = PROMPTS.find(p => p.chapterId === qrId);
-  return prompt ? prompt.text : "";
+  const matches = PROMPTS.filter(p => p.chapterId === qrId);
+  if (matches.length === 0) return "";
+  return matches
+    .map(p => `═══ ${p.label} ═══\n\n${p.text}`)
+    .join("\n\n\n");
 }
 
 function render() {
