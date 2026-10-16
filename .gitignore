@@ -1,4 +1,3 @@
 node_modules/
 *.log
 .firebase/
-video/intro.mp4
